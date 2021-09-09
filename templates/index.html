@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block head %}
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/mainpage.css') }}">
+    <title>Main Page</title>
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="welcome">
+            <h2>Welcome to Alekr</h2>
+            <h4><a href="{{url_for('register')}}">Register</a></h4>
+            <h4><a href="{{url_for('login')}}">Login</a></h4>
+        </div>
+    </div>
+    
+    
+{% endblock %}

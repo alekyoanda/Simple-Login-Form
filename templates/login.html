@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block head %}
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/loginpage.css') }}">
+    <title>Login Form</title>
+{% endblock %}
+
+{% block body %} 
+    <div class="body-square">
+            <div class="login-form">
+            <h2>Login</h2>
+            <form action="/login" method="post">
+                <div class="form text username">
+                    <input type="text" name="username" autocomplete="off" placeholder="Username">
+                </div>
+                <div class="form text password">
+                    <input type="password" name="password" autocomplete="off" placeholder="Password">
+                </div>
+                <input type="submit" class="submit" name="submit">
+                <p>Lupa password? Ayo daftar lagi <a href = "{{ url_for('register') }}">disini</a></p>
+            </form>
+        
+        </div>
+    </div>
+   
+
+{% endblock %}
