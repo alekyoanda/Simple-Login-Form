@@ -77,7 +77,7 @@ def profile(usr):
     else:
         return redirect(url_for("index"))
 
-@app.route("/anakanjing", methods=["GET", "POST"])
+@app.route("/registrants", methods=["GET", "POST"])
 def registrants():
     return render_template("registrants.html", USERS=users)
 
